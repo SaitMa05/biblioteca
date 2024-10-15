@@ -1,0 +1,38 @@
+@import 'base/normalize';
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/globales';
+@import 'base/utilidades';
+
+// Internas
+
+@import 'internas/admin';
+@import 'internas/confirmar';
+@import 'internas/perfilForm';
+@import 'internas/buscadorAdmin';
+@import 'internas/listadoPerfil';
+@import 'internas/agregarLibro';
+@import 'internas/reservas';
+@import 'internas/btn';
+@import 'internas/notebook';
+
+
+
+// Layout
+
+@import 'layout/header';
+@import 'layout/nav';
+@import 'layout/perfil';
+@import 'layout/main';
+@import 'layout/categoria';
+@import 'layout/libros';
+@import 'layout/buscador';
+@import 'layout/bienvenidos';
+@import 'layout/fondoInicio';
+@import 'layout/historia';
+@import 'layout/reservas';
+@import 'layout/alertaLogin';
+@import 'layout/registro';
+@import 'layout/librosDownload';
+@import 'layout/opcionLogin';
+@import 'layout/footer';

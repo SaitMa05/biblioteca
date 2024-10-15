@@ -1,0 +1,121 @@
+.perfilEditar{
+    background-color: $primarioCuatro;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 1rem;
+}
+
+.btnsPerfil{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0;
+
+
+
+    @include tablet{
+        flex-direction: row;
+        margin-bottom: 2rem;
+    } 
+
+
+
+    a{
+        color: $blanco;
+        background-color: $primarioSeis;
+        border-radius: 1rem;
+        padding: 1rem;
+        transition: 0.3s;
+        margin-bottom: 2rem;
+        text-align: center;
+
+        @include desktop{
+            margin-bottom: 0;
+            text-align: left;
+        }
+
+        &:nth-child(3){
+            text-decoration: underline;
+        }
+
+        &:hover{
+            background-color: $primarioCinco;
+        }
+    }
+}
+.perfilForm{
+
+    label{
+        font-size: 2rem;
+        color: $blanco;
+        text-transform: uppercase;
+
+    }
+    input{
+        width: 100%;
+        padding: 1rem;
+        border: none;
+        outline: none;
+        border-radius: 1rem;
+        color: $grisOscuro;
+        background-color: $gris2;
+        margin-bottom: 1rem;
+        
+
+        &:hover{
+            background-color: $gris2;
+        }
+    }
+
+    &.edit{
+        input{
+            background-color: $blanco;
+        }
+        .archivo{
+            margin-top: 2rem;
+        }
+    }
+
+    .imgEditar{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 6rem;
+
+        @include desktop{
+            flex-direction: row;
+        }
+
+        img{
+            width: 20rem;
+            height: 20rem;
+            object-fit: cover;
+            border-radius: 1rem;
+            border-radius: 50%;
+        }
+    }
+}
+
+.btn{
+    width: 30%;
+}
+form{
+    .btnActualizar{
+        color: $blanco;
+        padding: 1rem;
+        background-color: $celeste;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover{
+            transform: scale(1.03);
+            background-color: $blanco;
+            color: $negro;
+        }
+    }
+}
+
+
+

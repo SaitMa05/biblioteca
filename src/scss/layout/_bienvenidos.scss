@@ -1,0 +1,62 @@
+.bienvenidos{
+    margin: 0rem 0 10vh;
+    .bienvenidos-cont{
+        
+        .bienvenidos-inicio{
+            display: flex;
+            // flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            background-image: url(../../../../biblioteca/build/img/biblioteca.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            justify-content: center;
+            margin: auto;
+            height: 40vh;
+            // gap: 2rem;
+
+            // img{
+            //     height: 80%;
+            //     width: 80%;
+            //     // border-radius: 50%;
+            //     border: 1px solid $primarioSeis;
+
+            //     @include desktop{
+            //         height: 10rem;
+            //         width: 100%;
+            //         object-fit: cover;
+            //     }
+            // }
+            h2{
+                color: $blanco;
+                font-weight: $bold;
+                border-bottom: 1px solid $blanco;
+    
+                span{
+                    font-weight: 200;
+                    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                }
+            }
+    
+            p{
+                color: $blanco;
+            }
+        }
+    }
+}
+
+.d-n-m{
+    display: none;
+
+    @include desktop{
+        display: flex;
+    }
+}
+.d-n-d{
+    display: flex;
+
+    @include desktop{
+        display: none;
+    }
+}

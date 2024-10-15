@@ -1,0 +1,84 @@
+.actividades{
+    h2{
+        color: $blanco;
+        text-transform: uppercase;
+    }
+}
+.actividades-cajas{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 80%;
+    margin: auto;
+    gap: 2rem;
+
+    @include desktop{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.actividades-caja{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+   
+
+    // @include desktop{
+    //     grid-template-columns: repeat(1,1fr);
+    // }
+
+    img{
+        border-radius: 1rem;
+    }
+
+    &:nth-child(1){
+        background-image: url(../../../build/img/leer.jpg);
+    }
+    &:nth-child(2){
+        background-image: url(../../../build/img/ajedrez.jpg);
+
+        @include desktop{
+            transform: scale(1.1);
+            margin: 3rem;
+        }
+    }
+    &:nth-child(3){
+        background-image: url(../../../build/img/estudiar.jpg);
+    }
+    
+}
+.titulo-a{
+    font-size: 3.6rem;
+    font-weight: 600;
+    color: $blanco;
+}
+.texto-a{
+    line-height: 2;
+    color: $blanco;
+    font-weight: $bold;
+    text-shadow: 1px 2px $grisMedio;
+}
+.btnActividades{
+    p{
+        color: $blanco;
+        background-color: $primarioSeis;
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        border-radius: 0rem 1rem;
+        padding: 0.36rem;
+        font-weight: $bold;
+        transition: 0.3s;
+        
+        &:hover{
+            transform: scale(1.06);
+            border-radius: 1rem;
+        }
+
+        @include desktop{
+            // width: 30%;
+        }
+    }
+}

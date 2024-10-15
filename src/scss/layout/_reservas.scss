@@ -1,0 +1,69 @@
+.reservas{
+
+    .reservas-cont{
+        .reservas-cajas{
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            margin: auto;
+            .reservas-caja{
+                width: 90%;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                padding: 2rem;
+                background-color: $primarioCuatroT;
+                border-radius: 1rem;
+                margin-bottom: 2rem;
+                transition: 0.3s;
+
+                @include tablet{
+                    width: 60%;
+
+                }
+
+
+                img{
+                    width: 10rem;
+                    margin: auto;
+                }
+
+                .titulo-reservas{
+                    margin-bottom: 1rem;
+                    text-align: center;
+
+                    &.fs-big{
+                        font-size: 3rem;
+                        font-weight: $bold;
+
+                    }
+                }
+                .titulo-reservas, .fecha-reservas{
+                    color: $blanco;
+                    font-size: 2.2rem;
+
+                    span{
+                        font-weight: $bold;
+                    }
+                }
+
+                .btnsReservas{
+
+                    .btnReservar{
+                        color: $blanco;
+                        &:hover{
+                            color: $gris;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                &:hover{
+                    transform: scale(1.03);
+                }
+            }
+        }
+    }
+}

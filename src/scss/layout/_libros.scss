@@ -1,0 +1,131 @@
+.libros{
+    // margin-top: 2rem;
+    @include tablet{
+        padding: 2rem;
+    }
+    @include desktop{
+        margin: 2rem;
+        grid-column: 2 / 4;
+    }
+}
+.cajas-libros{
+    display: grid;
+    grid-template-columns: repeat(1,40vh);
+    place-content: center;
+
+    
+    @include tablet{
+        grid-template-columns: repeat(1,600px);
+        gap: 2rem;
+    }
+
+    @include desktop{
+        grid-template-columns: repeat(auto-fill, 350px);
+        margin: 0;
+    }
+    
+
+
+    .caja-libros{
+
+        place-content: center;
+        background-color: $blancoT;
+        padding: 2rem;
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+
+        @include tablet{
+            margin-bottom: 0;
+        }
+        @include desktop{
+            margin-bottom: 0;
+        }
+        img{
+            width: 26rem;
+            height: 36rem;
+            object-fit: cover;
+            margin: auto;
+        }
+        p{
+            text-align: center;
+        }
+        .titulo{
+            font-size: 2.6rem;
+        }
+        .autor{
+            font-weight: 200;
+            font-size: 1.9rem;
+
+            a{
+                color: $negro;
+                font-weight: $bold;
+                text-decoration: underline;
+            }
+        }
+
+        .btnReservar{
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            cursor: pointer;
+            margin-bottom: 2rem;
+        }
+
+        .cantidad{
+            display: flex;
+            align-items: center;
+        }
+
+        .cantidadDisponible{
+            display: flex;
+            justify-content: center;
+            max-width: 60%;
+            margin: auto;
+            text-align: center;
+            border: none;
+            border-radius: 1rem;
+            padding: 0.8rem;
+
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+}
+
+.formReserva{
+
+    .dateReserva{
+        display: flex;
+        border: none;
+        margin: auto;
+        padding: 1rem;
+        border-radius: 1.6rem;
+        margin-bottom: 2rem;
+        outline: none;
+        
+
+    }
+}
+
+.btnReservar{
+    
+    border: 2px solid #24b4fb;
+    background-color: #24b4fb;
+    border-radius: 1.6rem;
+    padding: 0.8em 1.2em 0.8em 1em;
+    transition: all ease-in-out 0.2s;
+    font-size: 16px;
+   
+   & span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 600;
+   }
+   
+   &:hover {
+    background-color: #0071e2;
+   }
+}

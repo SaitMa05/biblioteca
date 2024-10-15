@@ -1,0 +1,46 @@
+.header{
+    background-color: $primarioCuatro;
+    padding: 2rem;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
+    border-bottom: 0.2rem solid $primarioCinco;
+    margin-bottom: 0rem;
+}
+.header-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+
+    @include desktop{
+        flex-direction: row;
+    }
+
+    .izquierda{
+        .logo{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 6rem;
+            @include desktop{
+                gap: 2rem;
+                margin-bottom: 0rem;
+            }
+
+            @include desktop{
+                flex-direction: row;
+            }
+            img{
+                width: 16rem;
+            }
+            h1{
+                color: $blanco;
+                font-weight: 500;
+                font-size: 3rem;
+            }
+        }
+    }
+}

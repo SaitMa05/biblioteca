@@ -1,0 +1,99 @@
+
+
+
+            <!-- <?php  foreach($errores as $error) : ?>
+                <div class="alerta error">
+                    <?php echo $error; ?>
+                </div>
+            <?php endforeach ?> -->
+
+
+                $emailSesion = $_SESSION['usuario'];
+                $query = "SELECT * FROM usuario WHERE email = '$emailSesion'";
+                $resultado = mysqli_query($db, $query);
+                $usuario = mysqli_fetch_assoc($resultado);
+
+
+
+                <?php
+    require './includes/config/database.php';
+    $db = conectarDB();
+
+    if(!isset($_SESSION)){
+        session_start();
+    }
+
+    // session_start();
+    $auth = $_SESSION['login'];
+    if(!$auth){
+        header("Location: /biblioteca/login.php");
+    }
+    $emailSesion = $_SESSION['usuario'];
+    $query = "SELECT * FROM usuario WHERE email = '$emailSesion'";
+    $resultado = mysqli_query($db, $query);
+    $usuario = mysqli_fetch_assoc($resultado);
+
+
+
+?>
+
+    include './includes/selects/user.php';
+
+
+
+                <div class="caja"> <!-- Caja inicio-->
+                    <label for="password">Contraseña:</label>
+                    <input type="password" placeholder="Contraseña" name="password" id="password" required>
+
+                    <label for="passwordConfirm">Confirmar Contraseña</label>
+                    <input type="password" placeholder="Confirmar Contraseña" name="passwordConfirm" id="passwordConfirm" required>
+                </div> <!-- Caja fin-->
+
+                '$nombre', '$apellido', '$email', '$passwordHash', '$telefono', '$dni','$nombreImg', 0, NOW(), 0, '$tipo'
+
+
+
+
+    $query = "SELECT *
+    FROM reservas AS r
+    INNER JOIN libros AS l ON r.libros_libroscol = l.libroscol
+    INNER JOIN libro AS lb ON l.libros_idlibros = lb.idlibros
+    INNER JOIN autor AS a ON l.autor_idautor = a.idautor
+    INNER JOIN usuario AS u ON r.usuario_idusuario = u.idusuario
+    INNER JOIN tipo AS t ON r.usuario_tipo_idtipo = t.idtipo WHERE idusuario = $idSesion";
+    $resultado = mysqli_query($db, $query);
+
+
+
+        <?php 
+        // Iterar sobre cada fila de resultados
+        while ($libro = mysqli_fetch_assoc($resultado)) {
+        ?>
+               <p><?php echo $libro['titulo']?></p>
+               <p><?php echo $libro['nombre']?></p>
+               <p><?php echo $libro['apellido']?></p>
+               <p><?php echo $libro['fecha_reserva']?></p>
+               <hr>
+                
+        <?php 
+        }
+        ?>
+
+
+<button class="ocultarCursos">Mostrar Cursos</button>
+<div class="cursosC d-none">
+    <div class="caja-categoria">
+        <a href="">1ro A</a>
+    </div>    
+</div>
+
+
+
+                        <?php while($librospdf  = mysqli_fetch_assoc($resultadoPDF)): ?>
+                        <div class="caja-libros">
+                            <img src="/biblioteca/admin/imageneslibros/4f2da55822a282e8c9c4acc3870b9b40.jpg" alt="">
+                            <p class="titulo"><?php echo $librospdf['titulo'] ?></p>
+                            <p class="autor">Autor: <a href="<?php echo $librospdf['biografia'] ?>"><?php echo $librospdf['nombre'];?></a></p>
+                            <a class="btnReservar" download="<?php echo $librospdf['titulo'] ?>" href="/biblioteca/admin/archivos/<?php echo $librospdf['archivo']?>">Descargar Libro</a>
+                        </div>
+                        <?php endwhile; ?>

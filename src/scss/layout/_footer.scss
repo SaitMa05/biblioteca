@@ -1,0 +1,14 @@
+.footer{
+    background-color: $primarioCuatro;
+    padding: 2rem;
+    border-top: 0.2rem solid $primarioCinco;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    .footer-cont{
+        text-align: center;
+        p{
+            color: $blanco;
+        }
+    }
+}

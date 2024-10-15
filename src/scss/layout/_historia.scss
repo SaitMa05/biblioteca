@@ -1,0 +1,74 @@
+.m-10r{
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+.importante{
+        font-weight: $bold;
+        color: $negro;
+    
+}
+.historia{
+    p{
+        color: $blanco;
+        font-size: 1.8rem;
+    }
+
+    .historia-cont{
+            .historia-inicio{
+                display: flex;
+                flex-direction: column;
+                margin-top: 2rem;
+                gap: 2rem;
+
+                @include desktop{
+                    flex-direction: row;
+                }
+
+                
+                img{
+                    width: 100%;
+                    margin: auto;
+
+                    @include desktop{
+                        width: 50rem;
+                    }
+                }
+
+            }
+            .historia-completa{
+                
+            }
+        
+        }
+
+}
+
+.historia-index{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    .historia-info{
+        .historia-titulo{
+            font-size: 6rem;
+            line-height: 1.2;
+            margin-bottom: 0;
+        }
+        p{
+            max-width: 50ch;
+            text-align: center;
+            color: $blanco;
+        }
+
+    }
+        img{
+            width: 80%;
+            border-radius: 1rem;
+
+            @include desktop{
+                width: 80rem;
+            }
+        }
+}

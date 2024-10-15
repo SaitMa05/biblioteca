@@ -1,0 +1,151 @@
+
+// .login{
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+// }
+
+.registro{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: $primarioCuatro;
+    border: 2px solid $primarioSeis;
+    box-shadow: 1px 1px 13px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 1px 13px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 13px 0px rgba(0,0,0,0.75);
+
+
+    .registro-cont{
+
+        .logoLogin{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            margin-bottom: 2rem;
+
+            @include desktop{
+                flex-direction: row;
+            }
+
+            img{
+                width: 16rem;
+            }
+            h2{
+                font-size: 5rem;
+                font-weight: $bold;
+            }
+            span{
+                visibility: hidden;
+            }
+        }
+        .formularioLogin{
+            label{
+                color: $blanco;
+                font-size: 2.1rem;
+            }
+            input{
+                width: 100% ;
+                padding: 0.6rem;
+                border-radius: 1rem;
+                border: none;
+                outline: none;
+                margin-bottom: 0.6rem;
+            }
+
+                &:hover{
+                    background-color: transparent;
+                    outline: none;
+                }
+            }
+
+            .btnLogin{
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                max-width: 40%;
+                margin: auto;
+                margin-top: 2rem;
+                background-color: $primarioSeis;
+                color: $blanco;
+                font-weight: 600;
+                cursor: pointer;
+                transition: 0.3s;
+
+                &:hover{
+                    transform: scale(1.03);
+                }
+            }
+
+            
+        }
+    }
+
+
+
+.cuenta{
+    display: flex;
+    justify-content: end;
+    
+    color: $blanco;
+    text-decoration: underline;
+
+    @include desktop{
+        margin-right: 2rem;
+    }
+}
+
+.registroExitoso{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: $primarioCuatro;
+    h2{
+        font-size: 4rem;
+        margin-bottom: 2rem;
+        font-weight: $bold;
+    }
+    p{
+        text-align: center;
+        color: $blanco;
+        max-width: 70ch;
+        margin: 0;
+    }
+    a{
+        color: $blanco;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        text-decoration: underline;
+    }
+}
+
+.p-b-none{
+    padding-bottom: 0;
+}
+.archivo{
+    transition: 0.3s;
+    cursor: pointer;
+    &::-webkit-file-upload-button{
+        border: none;
+        padding: 1rem;
+        border-radius: 1rem;
+        color: $blanco;
+        background-color: $celeste;
+        cursor: pointer;
+    }
+
+    
+
+}
+.bg-white{
+    background-color: $blanco;
+}

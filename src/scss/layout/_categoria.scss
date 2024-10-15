@@ -1,0 +1,203 @@
+.inicioVentana{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+    @include desktop{
+        grid-template-columns: repeat(2, 26vh);     
+    }
+
+
+}
+.categoria{
+    background-color: $primarioCuatro;
+    width: 100%;
+    
+    @include desktop{
+        max-width: 100%;
+        min-height: 100vh;
+        height: auto;
+        box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+    }
+
+    .fechaActual{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: $blanco;
+      text-align: center;
+      margin: auto;
+      margin-top: 2rem;
+      p{
+        color: $blanco;
+        font-weight: $bold;
+        margin: 0;
+      }
+    }
+    .categoria-cont{
+        h2{
+            color: $primarioSeis;
+            font-size: 120%;
+            font-weight: 500;
+
+            @include desktop{
+                font-size: 2.6rem;
+            }
+        }
+
+    }
+}
+.cajas-categoria{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.caja-categoria{
+    background-color: darken($primarioCuatro, 6);
+    padding: 0.8rem;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    transition: 0.3s;
+
+    a{
+        color: $blanco;
+    }
+
+    &:hover{
+        background-color: darken($primarioCuatro, 3);
+        a{
+            color: $gris;
+        }
+    }
+}
+
+
+
+
+.btn-conteiner {
+    display: flex;
+    justify-content: center;
+    --color-text: #000;
+    --color-background: #fff;
+    --color-outline: #fff;
+    --color-shadow: #fff;
+  }
+  .btn-content {
+    display: flex;
+    align-items: center;
+    padding: 0px 6px;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    // font-size: 25px;
+    color: $negro;
+    transition: 1s;
+    border-radius: 10rem;
+    transform: rotate(90deg);
+    height: 10rem;
+    background-color: $primarioTres;
+    border: none;
+    cursor: pointer;
+    @include desktop{
+        display: none;
+    }
+  }
+
+  .rotate{
+    transform: rotate(270deg);
+  }
+  
+  .btn-content:hover{
+    transition: 0.5s;
+    -webkit-animation: btn-content 1s;
+    animation: btn-content 1s;
+    outline-offset: 0.2em;
+  }
+  
+  .btn-content .icon-arrow {
+    transition: 0.5s;
+    margin-right: 0px;
+    transform: scale(0.6);
+  }
+  
+  .btn-content:hover .icon-arrow {
+    transition: 0.5s;
+    margin-right: 25px;
+  }
+  
+  .icon-arrow {
+    width: 20px;
+    border-radius: 2rem;
+    position: relative;
+  }
+  
+  /* SVG */
+  #arrow-icon-one {
+    transition: 0.4s;
+    transform: translateX(-60%);
+  }
+  
+  #arrow-icon-two {
+    transition: 0.5s;
+    transform: translateX(-30%);
+  }
+  
+  .btn-content:hover #arrow-icon-three {
+    animation: color_anim 1s infinite 0.2s;
+  }
+  
+  .btn-content:hover #arrow-icon-one {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.6s;
+  }
+  
+  .btn-content:hover #arrow-icon-two {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.4s;
+  }
+  
+  /* SVG animations */
+  @keyframes color_anim {
+    0% {
+      fill: $gris;
+    }
+  
+    50% {
+      fill: $grisMedio;
+    }
+  
+    100% {
+      fill: $gris;
+    }
+  }
+  
+
+.ocultarCursos{
+  display: none;
+  background-color: $primarioSeis;
+  padding: 1rem;
+  border: none;
+  color: $blanco;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+
+  @include desktop{
+    display: flex;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+
+  &:hover{
+    transform: scale(1.03);
+  }
+}
+.d-none{
+
+  @include desktop{
+    display: none;
+  }
+}

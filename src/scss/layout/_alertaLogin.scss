@@ -1,0 +1,53 @@
+.alerta{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    color: $blanco;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    @include tablet{
+        width: 90%;
+    }
+
+    &.error{
+        background-color: red;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+    &.noReservas{
+        margin-bottom: 30%;
+        a{
+            color: $blanco;
+            text-decoration: underline;
+        }
+    }
+        
+    &.exito{
+        background-color: $primarioSeis;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        outline: none;
+    }
+
+    &.warning{
+        background-color: $amarillo;
+        outline: none;
+    }
+    &.p-1{
+        padding: 1rem;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover{
+            transform: scale(1.03);
+        }
+    }
+
+}
+
+.m-t{
+    margin-top: 2rem;
+}

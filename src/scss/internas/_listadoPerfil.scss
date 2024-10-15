@@ -1,0 +1,100 @@
+.paginas{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+
+    a{
+      display: flex;
+      justify-content: center;
+      background-color: $primarioSeis;
+      color: $blanco;
+      font-weight: $bold;
+      margin-top: 2rem;
+      margin-right: 2rem;
+      padding: 0.6rem 2rem; 
+      width: 3ch;
+      border-radius: 0.3rem;
+      
+    }
+}
+
+.listadoMain {
+  overflow-x: auto;
+  max-width: 100%;
+  margin: auto;
+
+  @include desktop{
+    max-width: 90%;
+    margin: auto;
+  }
+}
+
+.listado {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  background-color: $primarioCuatro;
+  border-radius: 1rem 1rem 0 0;
+
+  
+
+  th{
+    width: 10ch;
+    background-color: $primarioSeis;
+  }
+
+  th, td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    color: $blanco;
+
+
+    img{
+        width: 3.6rem;
+        height: 3.6rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: auto;
+    }
+  }
+
+  tbody{
+
+    td{
+        a{
+            color: $blanco;
+            padding: 1rem;
+            border-radius: 1rem;
+            background-color: $celeste;
+        }
+        .btnEliminar{
+            padding: 1rem;
+            border: none;
+            outline: none;
+            border-radius: 1rem;
+            color: $blanco;
+            background-color: red;
+            cursor: pointer;
+        }
+    }
+  }
+
+  .btnTable{
+
+
+    form{
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      justify-content: center;
+      margin: auto;
+    }
+  }
+
+
+
+}
+.imagen-small{
+  width: 16rem;
+}
